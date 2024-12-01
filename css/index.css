@@ -1,0 +1,334 @@
+/* hero section */
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.hero-about-me{
+    display: flex;
+    flex-basis: 65%;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-about-me h1{
+    font-size: 30px;
+}
+.hero-about-me h1 span{
+    color: #FF4900;
+    animation: fade 5s ease-in-out infinite;
+}
+
+@keyframes fade{
+    0%, 100% {opacity: 0;}
+    50% {opacity: 1;}
+}
+.hero-about-me p{
+    width: 450px;
+    font-size: 15px;
+    line-height: 22px;
+   margin-bottom: 20px;
+}
+.hero-about-me .explore-button{
+    width: 140px;
+    height: 40px;
+    padding: 10px 5px;
+    color: white;
+    background-color: #FF4900;
+    border-style: none;
+    border-radius: 4px;
+    font-weight: bold; cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+}
+.hero-about-me .explore-button:hover{
+    background-color: #fff;
+    color: #FF4900;
+}
+.Portfolio-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 30%;
+}
+.Portfolio-image img{
+    height: 200px;
+    border: solid 10px #FF4900 ;
+    border-radius: 100px;
+}
+
+/* Adjust content for smaller screens */
+@media screen and (max-width: 1024px) { /* Tablets and smaller desktops */
+    .hero-section {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align content */
+        padding: 40px 20px; /* Reduce padding */
+        justify-content: center;
+    }
+
+    .hero-about-me {
+        flex-basis: 100%; /* Take full width */
+        text-align: center; /* Center text */
+    }
+
+    .hero-about-me p {
+        width: 500px; 
+        font-size: 14px; /* Adjust font size */
+        line-height: 20px;
+    }
+
+    .Portfolio-image {
+        margin-top: 20px; /* Add spacing between text and image */
+    }
+
+    .Portfolio-image img {
+        height: 180px; /* Slightly reduce image size */
+    }
+}
+
+@media screen and (max-width: 768px) { /* Large mobile devices */
+    .hero-about-me h1 {
+        font-size: 26px; /* Adjust font size for headings */
+    }
+
+    .hero-about-me p {
+        font-size: 13px; /* Reduce font size for better readability */
+        width: 400px;
+        text-align: center;
+    }
+
+    .hero-about-me .explore-button {
+        width: 120px; /* Reduce button width */
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) { /* Small mobile devices */
+    .hero-about-me h1 {
+        font-size: 22px; /* Further reduce font size */
+    }
+
+    .hero-about-me p {
+        width: auto;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .Portfolio-image img {
+        height: 150px; /* Further reduce image size */
+        border-width: 5px; /* Adjust border thickness */
+    }
+}
+
+
+/* HOME ABOUT */
+.about-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.sub-title{
+    color: #FF4900;
+    margin-bottom: 20px;
+}
+.home-about{
+    display: flex;
+    flex-direction: row;
+}
+.about-image{
+    display: flex;
+    flex-basis: 40%;
+}
+.about-image img{
+    height: 500px;
+}
+.about-me-home{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.about-me-home h1{
+    font-size: 28px;
+    margin-bottom: 30px;
+    line-height: 35px;
+}
+.about-me-home span{
+    color: #FF4900;
+}
+.about-me-home p{
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+#skills{
+    color: #FF4900;
+    font-size: 18px;
+}
+.skills-button, .work-button{
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: solid 1px #FF4900;
+    cursor: pointer;
+    color: #FF4900;
+    font-size: 15px;
+    transition: background-color 0.15s, color 0.15s;
+}
+.skills-button:hover, .work-button:hover{
+    background-color: #FF4900;
+    color: #fff;
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .home-about {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .about-image, .about-me-home {
+        flex-basis: 100%; /* Make each section full-width */
+    }
+
+    .about-me-home h1 {
+        margin-top: 20px;
+        text-align: center; /* Center text for better aesthetics */
+        font-size: 25px;
+        line-height: 28px;
+    }
+
+    .about-me-home p{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 13px;
+    }
+
+    #skills {
+        text-align: center;
+    }
+    .tab-skills{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: centre;
+    }
+
+    .skills-button, .work-button {
+        margin: 10px auto; /* Center buttons */
+        display: block;
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-container {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .about-me-home h1 {
+        font-size: 20px;
+    }
+
+    .about-me-home p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .skills-button, .work-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* HOME SERVICES */
+#services{
+    padding: 80px 30px;
+}
+.service-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.service-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    border-radius: 8px;
+    transition: background-color 0.5s, transform 0.5s;
+}
+.service-list div i{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.service-list div h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.service-list div p{
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 22px;
+}
+.service-list div a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+}
+.service-list div:hover{
+    background-color: #FF4900;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.services-button, .submit-button{
+    margin-top: 20px;
+    padding: 13px 20px;
+    border: solid 1px #FF4900;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF4900;
+    color: #fff;
+    font-size: 15px;
+    transition: background-color 0.5s, color 0.5s;
+}
+.services-button:hover, .submit-button:hover{
+    background-color: #fff;
+    color: #FF4900;
+}
+
+/* Home Portfolio */
+#portolio{
+    padding: 50px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.work{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.work:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.work img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+

@@ -1,0 +1,408 @@
+/* General Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: 1;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+    animation: slide-animation 6s infinite; 
+    animation-play-state: running; /* Ensure it's running by default */
+}
+
+.slide {
+    flex: 1;
+    min-width: 100%;
+    height: 95vh;
+    background-size: cover;
+    background-position: center;
+   /* animation: slide-animation 5s infinite;*/
+}
+
+/* Slider Animation */
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }  /* Moves to the second image */
+    100% { transform: translateX(-200%); } /* Loops back to the first image */
+}
+
+/* Pause the animation on hover */
+.hero-section:hover .slider {
+    animation-play-state: paused;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Above overlay */
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Design for Hero Section */
+@media screen and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Reduce font size for tablets */
+    }
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+    .cta-button {
+        font-size: 1rem; /* Slightly smaller button text */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Further reduce font size for smaller devices */
+    }
+    .hero-content p {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 6px 14px;
+    }
+    .slider .slide {
+        height: 80vh; /* Adjust slide height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content {
+        padding: 0 15px; /* Add padding to prevent text from touching edges */
+    }
+    .hero-content h1 {
+        font-size: 1.5rem; /* Further reduce font size for mobile */
+    }
+    .hero-content p {
+        font-size: 0.9rem; /* Smaller font for mobile readability */
+    }
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    .slider .slide {
+        height: 70vh; /* Optimize height for mobile */
+    }
+    .hero-section {
+        height: 70vh; /* Allow content to determine height */
+    }
+}
+
+
+/* General About Section */
+.about-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    color: #333;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    width: 45%;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FF4900;
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    width: 45%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content, .about-image {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .about-container {
+        padding: 20px; /* Add padding for smaller devices */
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem; /* Reduce heading size for better readability */
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .about-image img {
+        border-radius: 4px; /* Reduce radius for compact screens */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for smaller screens */
+    }
+}
+
+
+/* General Skills Section Styling */
+.skills-section {
+    background-color: #f8f8f8; /* Light gray background for the section */
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 1200px; /* Maximum width to center content */
+    margin: 0 auto; /* Center align content */
+}
+
+/* Heading and Description */
+.skills-container h2 {
+    font-size: 2.5rem; /* Larger heading */
+    color: #FF4900; /* Dark text color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.skills-container p {
+    font-size: 1.2rem;
+    color: #777; /* Lighter text color */
+    margin-bottom: 40px;
+}
+
+/* Skill Categories */
+.skills-category {
+    margin-bottom: 50px; /* Spacing between categories */
+    display: flex; /* Make this a flex container */
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly between categories */
+   
+}
+
+.skills-category h3 {
+    font-size: 2rem;
+    color: #007bff; /* Blue color for section headers */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Capitalized text */
+}
+
+/* Grid Layout for Skills List */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row for desktop view */
+    gap: 20px; /* Space between skills */
+    justify-items: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically */
+    width: 100%; /* Make sure the container width is 100% */
+    padding: 0 15px; /* Optional: Add some padding to the sides if needed */
+    box-sizing: border-box; /* Make sure padding is included in the width calculation */
+}
+
+.skill {
+    background-color: white; /* White background for each skill card */
+    padding: 50px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.skill i {
+    font-size: 40px; /* Icon size */
+    color: #007bff; /* Blue icon color */
+    margin-bottom: 10px;
+}
+
+.skill h4 {
+    font-size: 1.5rem;
+    color: #333; /* Dark text color for skill name */
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #555; /* Lighter text color for skill description */
+}
+
+/* Skill Card Progress Bar Styling */
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0; /* Light gray background for progress bar */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #FF4900; /* Blue color for progress fill */
+    border-radius: 5px;
+}
+
+/* Positioning the percentage text inside the progress bar */
+.percentage {
+    position: absolute;
+    top: -20px; /* Adjust this to position the text above the bar */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff; /* Blue color to match the progress bar */
+}
+
+/* Icons Style (FontAwesome) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Skill Animation */
+@keyframes fadeInSkills {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+.skills-list .skill {
+    animation: fadeInSkills 0.5s ease-in-out; /* Fade-in animation */
+}
+
+.skills-list .skill:nth-child(even) {
+    animation-delay: 0.2s; /* Stagger animation for even items */
+}
+
+.skills-list .skill:nth-child(odd) {
+    animation-delay: 0.4s; /* Stagger animation for odd items */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .skills-container h2 {
+        font-size: 2rem; /* Smaller font size on tablets and smaller screens */
+    }
+
+    .skills-container p {
+        font-size: 1rem; /* Smaller description font */
+    }
+
+    .skills-category h3 {
+        font-size: 1.5rem; /* Smaller section headers on tablets and smaller screens */
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens (tablets) */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-container h2 {
+        font-size: 1.8rem; /* Even smaller font size for mobile */
+    }
+
+    .skills-container p {
+        font-size: 0.9rem; /* Further reduced font size for better readability on mobile */
+    }
+
+    .skills-category h3 {
+        font-size: 1.3rem; /* Smaller section headers on mobile */
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* 1 item per row on mobile screens */
+    }
+}

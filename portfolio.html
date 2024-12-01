@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7303f8f448.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="menu.js"></script>
+    <script src="image-buttons.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html"><img class="logo" src="images/logo12.svg" alt="Logo"></a>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i> 
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="services.html">Services</a></li>
+                   <li><a href="portfolio.html">Portfolio</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="portfolio-hero">
+        <div class="hero-content">
+            <h1>Our Portfolio</h1>
+            <p>Take a journey through our collection of work, showcasing moments of creativity and excellence.</p>
+        </div>
+    </section> 
+    <section id="portfolio-gallery">
+        <div class="container">
+            <h2>My Work</h2>
+            <p>Explore a selection of my recent projects, capturing the moments that matter most.</p>
+            
+            <!-- Category Buttons -->
+            <div class="category-buttons">
+                <button class="category-btn" data-category="all">All</button>
+                <button class="category-btn" data-category="wedding">Wedding</button>
+                <button class="category-btn" data-category="portrait">Portrait</button>
+                <button class="category-btn" data-category="event">Event</button>
+                <button class="category-btn" data-category="product">Product</button>
+            </div>
+    
+            <!-- Gallery Grid -->
+            <div class="gallery">
+                <div class="gallery-item" data-category="wedding" style="background-image: url('images/work-1.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="wedding" style="background-image: url('images/work-14.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="portrait" style="background-image: url('images/work-2.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="portrait" style="background-image: url('images/work-24.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="event" style="background-image: url('images/work-3.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="wedding" style="background-image: url('images/work-12.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="product" style="background-image: url('images/work-10.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="product" style="background-image: url('images/work-23.jpg');">
+
+                </div>
+                <div class="gallery-item" data-category="event" style="background-image: url('images/work-17.jpg');">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+
+            <!-- Testimonial Cards -->
+            <div class="testimonials-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="images/work-19.jpg" alt="Client 1" class="testimonial-image">
+                    <p class="testimonial-message">"This was the best experience! The photos are amazing, and the service was top-notch!"</p>
+                    <h3 class="client-name">Audrey kats</h3>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img src="images/testimonial-2.jpg" alt="Client 2" class="testimonial-image">
+                    <p class="testimonial-message">"Amazing attention to detail and professionalism. Could not be happier with the results!"</p>
+                    <h3 class="client-name">Stella</h3>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img src="images/testimonial-3.jpg" alt="Client 3" class="testimonial-image">
+                    <p class="testimonial-message">"The photos really captured the essence of our event. Thank you for your excellent work!"</p>
+                    <h3 class="client-name">Sharifa</h3>
+                </div>
+
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section> 
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Ready to Capture Your Moments?</h2>
+            <p>Get in touch with us today to book your next photoshoot, event coverage, or custom photography project. We can't wait to work with you!</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <!-- About Section -->
+            <div class="footer-column">
+                <h3>About</h3>
+                <p>
+                    We are dedicated to capturing moments that last a lifetime through our photography and videography services. Let us bring your stories to life.
+                </p>
+            </div>
+            <!-- Links Section -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Section -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +123-456-7890</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@example.com</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Holli Xplicits. All rights reserved.</p>
+        </div>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,346 @@
+.portfolio-hero {
+    height: 100vh;
+    background-image: url('../images/hero-pic.jpg'); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
+
+.portfolio-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FF4900;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media(max-width: 768px){
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 18px;
+        
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+@media(max-width: 480px){
+    .hero-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+        
+    }
+    .hero-content p {
+        font-size: 1.0rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+#portfolio-gallery {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#portfolio-gallery h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#portfolio-gallery p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+@media(max-width: 480px){
+    #portfolio-gallery h2{
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+    }
+    #portfolio-gallery p{
+        font-size: 1.0rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* Category Buttons */
+.category-buttons {
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    background-color: #FF4900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #E33E00;
+}
+
+/* Responsive Design for Category Buttons */
+@media (max-width: 720px) {
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        justify-content: center; /* Center buttons horizontally */
+        gap: 10px; /* Add space between buttons */
+        margin-bottom: 20px; /* Adjust margin for compactness */
+    }
+
+    .category-btn {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+        margin: 5px 0; /* Remove horizontal margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align stacked buttons */
+    }
+
+    .category-btn {
+        width: 60%; /* Make buttons occupy most of the screen width */
+        text-align: center;
+        margin: 5px 0; /* Ensure even spacing between stacked buttons */
+        font-size: 14px; /* Adjust font size to make buttons smaller */
+        padding: 8px 12px; /* Reduce padding for smaller buttons */
+    }
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    height: 390px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 60px 20px;
+    text-align: center;
+}
+.testimonials-section h2{
+    color: #FF4900;
+    margin-bottom: 20px;
+}
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 300px; /* You can adjust this width based on the design */
+    text-align: center;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 20px;
+}
+
+.testimonial-message {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.client-name {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonials-container {
+        justify-content: center; /* Center-align cards on medium screens */
+    }
+
+    .testimonial-card {
+        width: 45%; /* Adjust card width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 80%; /* Adjust card width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        width: 90%; /* Further adjust width for very small screens */
+        padding: 15px; /* Reduce padding to fit smaller screens */
+    }
+
+    .testimonial-message {
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .client-name {
+        font-size: 1.1rem; /* Adjust name font size */
+    }
+}
+
+.cta {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: white;
+    color: #007bff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Responsive Design for Call-to-Action Section */
+@media (max-width: 1024px) {
+    .cta h2 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .cta p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .cta-button {
+        padding: 12px 25px; /* Slightly reduce button size */
+        font-size: 1rem; /* Adjust button text size */
+    }
+}
+
+@media (max-width: 768px) {
+    .cta {
+        padding: 50px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .cta h2 {
+        font-size: 1.8rem; /* Further reduce heading size */
+    }
+
+    .cta p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Smaller buttons for mobile */
+        font-size: 0.9rem; /* Smaller button text */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 40px 10px; /* Minimal padding for very small screens */
+    }
+
+    .cta h2 {
+        font-size: 1.5rem; /* Compact heading size */
+    }
+
+    .cta p {
+        font-size: 0.8rem; /* Compact paragraph font size */
+    }
+
+    .cta-button {
+        padding: 8px 15px; /* Compact button size */
+        font-size: 0.8rem; /* Compact button text */
+    }
+}
+

@@ -1,0 +1,276 @@
+/* Contact Hero Section */
+.contact-hero-section {
+    background: url('../images/office-2.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: 25px;
+}
+
+.contact-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    z-index: 1;
+}
+
+.contact-hero-section .container {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+.contact-hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #FF4900;
+}
+
+.contact-hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contact-hero-section h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-hero-section p {
+        font-size: 1.1rem; /* Reduce font size for readability */
+        max-width: 500px; /* Adjust paragraph width */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-section {
+        height: 500px; /* Reduce section height for smaller devices */
+        overflow: hidden;
+    }
+
+    .contact-hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero-section p {
+        font-size: 1rem;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-section {
+        height: 450px; /* Let the height adjust automatically */
+        padding: 20px; /* Add padding to ensure spacing */
+        overflow: hidden;
+    }
+
+    .contact-hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-hero-section p {
+        font-size: 0.9rem;
+        width: 100%; /* Ensure the paragraph takes full width */
+        margin: 0; /* Reset margin for better alignment */
+        padding: 0 10px; /* Extra padding to avoid edges */
+    }
+}
+.sub-title{
+    color: #FF4900;
+    margin-bottom: 20px;
+}
+
+.map-contact-section {
+    display: flex;
+    flex-wrap: wrap; /* Ensure it stacks on smaller screens */
+    gap: 20px; /* Space between the two sections */
+    padding: 40px 20px;
+   
+}
+
+.map-contact-section .map {
+    flex: 1; /* Takes half the width or more */
+    min-width: 300px; /* Ensures a reasonable size on smaller screens */
+}
+
+.map-contact-section .contact-info {
+    flex: 1; /* Takes half the width or more */
+    min-width: 300px; /* Ensures a reasonable size on smaller screens */
+    background-color: white; /* Add a card-like effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.map-contact-section .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.map-contact-section .contact-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive design for tablet and smaller screens */
+@media screen and (max-width: 1024px) {
+    .map-contact-section {
+        display: flex; /* Ensure the container remains flexible */
+        flex-wrap: wrap; /* Allow wrapping of columns */
+        gap: 20px; /* Space between the sections */
+    }
+
+    .map-contact-section .map,
+    .map-contact-section .contact-info {
+        flex: 1; /* Both sections take equal space */
+        min-width: 48%; /* Ensure both sections take up nearly half the space */
+    }
+
+    .map-contact-section {
+        padding: 30px 15px; /* Adjust padding for better spacing */
+    }
+
+    .map-contact-section .contact-info h3 {
+        font-size: 1.6rem; /* Slightly smaller heading on tablet */
+    }
+
+    .map-contact-section .contact-info p {
+        font-size: 0.95rem; /* Slightly smaller paragraph font on tablet */
+    }
+}
+
+/* Stack the sections vertically on mobile */
+@media screen and (max-width: 768px) {
+    .map-contact-section {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 20px; /* Ensure space between sections */
+        padding: 20px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .map-contact-section .map,
+    .map-contact-section .contact-info {
+        min-width: 100%; /* Each section will take the full width */
+        padding: 0;
+    }
+
+    .map-contact-section .contact-info h3 {
+        font-size: 1.4rem; /* Smaller heading font on mobile */
+    }
+
+    .map-contact-section .contact-info p {
+        font-size: 0.9rem; /* Smaller paragraph font on mobile */
+    }
+}
+
+.cta {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: white;
+    color: #007bff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.submit-button{
+    margin-top: 20px;
+    padding: 13px 20px;
+    border: solid 1px #FF4900;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF4900;
+    color: #fff;
+    font-size: 15px;
+    transition: background-color 0.5s, color 0.5s;
+}
+.submit-button:hover{
+    background-color: #fff;
+    color: #FF4900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta {
+        padding: 50px 20px;
+    }
+
+    .cta h2 {
+        font-size: 2rem; /* Adjust the heading size */
+    }
+
+    .cta p {
+        font-size: 1.1rem; /* Adjust the paragraph size */
+    }
+
+    .cta-button {
+        padding: 12px 25px; /* Adjust button size */
+        font-size: 1rem; /* Smaller button text */
+    }
+
+    .submit-button {
+        padding: 12px 25px; /* Adjust button size */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta {
+        padding: 40px 15px; /* Reduce padding on very small screens */
+    }
+
+    .cta h2 {
+        font-size: 1.7rem; /* Even smaller heading size */
+    }
+
+    .cta p {
+        font-size: 1rem; /* Smaller paragraph font */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Smaller button size */
+        font-size: 0.9rem; /* Even smaller button text */
+    }
+
+    .submit-button {
+        padding: 10px 20px; /* Smaller submit button */
+        font-size: 13px; /* Smaller font size */
+    }
+}

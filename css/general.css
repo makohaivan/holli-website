@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #080808;
+    color: #fff; 
+    font-family: Questrial, Tahoma;
+    padding-top: 70px;
+}
+
+#header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(100, 55, 200, 0.7);
+}
+.logo{
+    height: auto;
+    width: 60px;
+}
+
+.container{
+    padding: 10px 10%;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Menu toggle for device*/
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Open menu */
+.nav-menu.open {
+    transform: translateX(0);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 55px;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: #080808;
+        color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: flex; /* Use flex to enable toggling */
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+
+    .logo {
+        height: 60px;
+    }
+}
+@media  screen and (max-width: 480px) {
+    #header{
+        height: 60px;
+    }
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(204, 62, 10);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0; /* Reduced top and bottom padding */
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Ensure it doesn't stretch too wide */
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 5px; /* Reduced padding inside columns */
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px; /* Reduced space below heading */
+    color: #FF4900;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px; /* Reduced space between items */
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #FF4900;
+}
+
+.footer-column ul li i {
+    margin-right: 10px;
+    color: #FF4900;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    /* text-align: center; */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #007bff;
+    padding: 5px 0; /* Reduced padding for the bottom section */
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Responsive adjustments for screens between 480px and 800px */
+@media (max-width: 800px) and (min-width: 480px) {
+    .footer .container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align the footer content */
+        padding: 0 20px; /* Ensure padding on sides */
+    }
+
+    .footer-column {
+        min-width: 100%; /* Each column takes full width */
+        padding: 15px 0; /* Adjust padding for spacing */
+        text-align: center; /* Center align text inside each column */
+    }
+
+    .footer-column h3 {
+        font-size: 1.1rem; /* Adjust heading size */
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 13px; /* Reduce font size slightly */
+        text-align: center;
+    }
+
+    .footer-bottom {
+        padding: 10px 0; /* Adjust padding */
+    }
+}
+
+/* For screens smaller than 480px (mobile) */
+@media (max-width: 480px) {
+    .footer .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align everything */
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .footer-column {
+        min-width: 100%; /* Each section takes full width */
+        padding: 10px 0; /* Adjust padding for mobile */
+        text-align: center; /* Center text */
+    }
+
+    .footer-column h3 {
+        font-size: 1rem; /* Smaller heading size */
+    }
+
+    .footer p {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .footer-bottom {
+        padding: 10px 0; /* Adjust padding for small screens */
+    }
+}
+
+
